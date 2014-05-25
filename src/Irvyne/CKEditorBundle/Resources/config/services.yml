@@ -1,0 +1,7 @@
+parameters:
+#    irvyne_ck_editor.example.class: Irvyne\CKEditorBundle\Example
+
+services:
+#    irvyne_ck_editor.example:
+#        class: %irvyne_ck_editor.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

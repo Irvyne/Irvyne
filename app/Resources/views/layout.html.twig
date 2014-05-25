@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Irvyne Blog About Nothing{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ asset('bundles/irvynemain/css/lib/normalize-3.0.1.css') }}">
+        {% block stylesheets %}
+            {% stylesheets
+                '@IrvyneMainBundle/Resources/public/less/*.less'
+                '@IrvyneBlogBundle/Resources/public/less/*.less'
+                filter='?uglifycss'
+                output='css/main.css' %}
+                <link rel="stylesheet" href="{{ asset_url }}">
+            {% endstylesheets %}
+        {% endblock stylesheets %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+        {% block alternate %}
+            {% for locale in locales %}
+                {% if app.request.locale != locale %}
+                    <link rel="alternate" hreflang="{{ locale }}" href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale' : locale})) }}">
+                {% endif %}
+            {% endfor %}
+        {% endblock alternate %}
+    </head>
+    <body>
+        {% block body %}
+            <div class="container">
+                {% block content %}
+                    <div itemscope itemtype="http://schema.org/Article">
+                        <span itemprop="name">How to Tie a Reef Knot</span>
+                        by <span itemprop="author">John Doe</span>
+                        This article has been tweeted 1203 times and contains 78 user comments.
+                        <meta itemprop="interactionCount" content="UserTweets:1203"/>
+                        <meta itemprop="interactionCount" content="UserComments:78"/>
+                    </div>
+                {% endblock content %}
+            </div>
+        {% endblock body %}
+        {% block javascripts %}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="{{ asset('bundles/irvynemain/js/lib/jquery-2.1.0.min.js') }}"><\/script>')</script>
+            {% javascripts
+            '@IrvyneMainBundle/Resources/public/js/lib/*.js'
+            filter='?uglifyjs'
+            output='js/lib.js' %}
+            <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+            {% javascripts
+                '@IrvyneMainBundle/Resources/public/js/*.js'
+                '@IrvyneBlogBundle/Resources/public/js/*.js'
+                filter='?uglifyjs'
+                output='js/main.js' %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock javascripts %}
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                e.src='//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

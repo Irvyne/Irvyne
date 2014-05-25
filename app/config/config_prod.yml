@@ -11,6 +11,7 @@ imports:
 #        result_cache_driver: apc
 #        query_cache_driver: apc
 
+# Monolog Configuration
 monolog:
     handlers:
         main:
@@ -23,3 +24,7 @@ monolog:
             level: debug
         console:
             type:  console
+
+# Swiftmailer Configuration
+swiftmailer:
+    delivery_address: %mailer_delivery_address_prod%

@@ -1,0 +1,25 @@
+services:
+    irvyne_blog.admin.article:
+        class: Irvyne\BlogBundle\Admin\ArticleAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Blog", label: "Article" }
+        arguments:
+            - ~
+            - Irvyne\BlogBundle\Entity\Article
+            - ~
+    irvyne_blog.admin.category:
+        class: Irvyne\BlogBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Blog", label: "Category" }
+        arguments:
+            - ~
+            - Irvyne\BlogBundle\Entity\Category
+            - ~
+    irvyne_blog.admin.tag:
+        class: Irvyne\BlogBundle\Admin\TagAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Blog", label: "Tag" }
+        arguments:
+            - ~
+            - Irvyne\BlogBundle\Entity\Tag
+            - ~

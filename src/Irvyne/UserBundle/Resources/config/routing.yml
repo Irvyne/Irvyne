@@ -1,0 +1,7 @@
+irvyne_fos_user:
+    resource: "@IrvyneUserBundle/Resources/config/routing/fos_user.yml"
+    prefix:   /
+
+irvyne_user_homepage:
+    path:  /hello/{name}
+    defaults: { _controller: IrvyneUserBundle:Default:index }

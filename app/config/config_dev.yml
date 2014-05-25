@@ -1,16 +1,19 @@
 imports:
     - { resource: config.yml }
 
+# Framework Configuration
 framework:
     router:
         resource: "%kernel.root_dir%/config/routing_dev.yml"
         strict_requirements: true
     profiler: { only_exceptions: false }
 
+# WebProfiler Configuration
 web_profiler:
     toolbar: true
     intercept_redirects: false
 
+# Monolog Configuration
 monolog:
     handlers:
         main:
@@ -29,8 +32,14 @@ monolog:
         #    type:   chromephp
         #    level:  info
 
+# Assetic Configuration
 assetic:
     use_controller: true
 
-#swiftmailer:
-#    delivery_address: me@example.com
+# Swiftmailer Configuration
+swiftmailer:
+    delivery_address: %mailer_delivery_address_dev%
+
+# Alice Configuration
+h4cc_alice_fixtures:
+    locale: %locale%

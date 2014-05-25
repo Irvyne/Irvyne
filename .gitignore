@@ -9,5 +9,9 @@
 /vendor/
 /bin/
 /composer.phar
+/web/css/*
+/web/fonts/*
+/web/js/*
 
 /.idea/
+/.vagrant/

@@ -1,0 +1,24 @@
+irvyne_main:
+    resource: "@IrvyneMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+
+irvyne_user:
+    resource: "@IrvyneUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+irvyne_ck_editor:
+    resource: "@IrvyneCKEditorBundle/Resources/config/routing.yml"
+    prefix:   /
+
+irvyne_blog:
+    resource: "@IrvyneBlogBundle/Resources/config/routing.yml"
+    prefix:   /

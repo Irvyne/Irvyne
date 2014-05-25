@@ -10,6 +10,15 @@ parameters:
     mailer_host:       127.0.0.1
     mailer_user:       ~
     mailer_password:   ~
+    mailer_delivery_address_prod: production@unknown.com
+    mailer_delivery_address_dev: development@unknown.com
+
+    java:              /usr/bin/java
+    node:              /usr/local/bin/node
+    node_modules:      /usr/local/lib/node_modules
+    uglifyjs:          /usr/local/bin/uglifyjs
+    uglifycss:         /usr/local/bin/uglifycss
 
     locale:            en
+    locales:           [en, fr]
     secret:            ThisTokenIsNotSoSecretChangeIt

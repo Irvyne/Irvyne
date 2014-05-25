@@ -1,0 +1,10 @@
+tag:
+    path:     /
+    defaults: { _controller: "IrvyneBlogBundle:Tag:index" }
+
+tag_show:
+    path:     /{slug}
+    defaults: { _controller: "IrvyneBlogBundle:Tag:show" }
+
+
+

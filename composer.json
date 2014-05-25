@@ -18,7 +18,22 @@
         "sensio/distribution-bundle": "~2.3",
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+
+        "sonata-project/doctrine-orm-admin-bundle": "dev-master@dev",
+        "sonata-project/formatter-bundle": "dev-master",
+        "sonata-project/jquery-bundle": "dev-master",
+        "h4cc/alice-fixtures-bundle": "dev-master@dev",
+        "jms/i18n-routing-bundle": "dev-master@dev",
+        "stof/doctrine-extensions-bundle": "~1.1@dev",
+        "a2lix/translation-form-bundle" : "dev-master",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "knplabs/doctrine-behaviors": "~1.0@dev",
+        "knplabs/knp-gaufrette-bundle" : "dev-master@dev",
+        "vich/uploader-bundle": "dev-master@dev",
+        "egeloen/ckeditor-bundle": "~2.0",
+        "braincrafted/bootstrap-bundle": "~2.0",
+        "twbs/bootstrap": "~3.0"
     },
     "scripts": {
         "post-install-cmd": [
@@ -26,19 +41,22 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Braincrafted\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::install"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Braincrafted\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::install"
         ]
     },
     "config": {
         "bin-dir": "bin"
     },
+    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

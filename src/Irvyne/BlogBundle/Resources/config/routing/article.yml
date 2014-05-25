@@ -1,0 +1,7 @@
+article_list:
+    path:     /
+    defaults: { _controller: "IrvyneBlogBundle:Article:index" }
+
+article_show:
+    path:     /{slug}
+    defaults: { _controller: "IrvyneBlogBundle:Article:show" }

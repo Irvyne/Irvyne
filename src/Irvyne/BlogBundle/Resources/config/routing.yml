@@ -1,0 +1,11 @@
+IrvyneBlogBundle_article:
+    resource: "@IrvyneBlogBundle/Resources/config/routing/article.yml"
+    prefix:   /
+
+IrvyneBlogBundle_category:
+    resource: "@IrvyneBlogBundle/Resources/config/routing/category.yml"
+    prefix:   /category
+
+IrvyneBlogBundle_tag:
+    resource: "@IrvyneBlogBundle/Resources/config/routing/tag.yml"
+    prefix:   /tag

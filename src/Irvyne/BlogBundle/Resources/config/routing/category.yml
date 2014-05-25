@@ -1,0 +1,10 @@
+category:
+    path:     /
+    defaults: { _controller: "IrvyneBlogBundle:Category:index" }
+
+category_show:
+    path:     /{slug}
+    defaults: { _controller: "IrvyneBlogBundle:Category:show" }
+
+
+

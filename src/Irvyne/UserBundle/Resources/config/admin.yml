@@ -1,0 +1,6 @@
+services:
+    irvyne_user.admin.user:
+        class: Irvyne\UserBundle\Admin\UserAdmin
+        arguments: [~, Irvyne\UserBundle\Entity\User, IrvyneUserBundle:UserAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: User Management, label: User}
